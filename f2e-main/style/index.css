@@ -6,6 +6,41 @@
     --alpha-40: rgba(255, 255, 255, 0.4);
 }
 
+/* helper ------------------- */
+
+.h-container-m {
+    max-width: 1200px;
+}
+
+.h-mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h-img-resp {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.h-row {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.h-gradient-stript {
+    background-image: linear-gradient(-45deg,
+            var(--alpha-40) 0%,
+            var(--alpha-40) 25%,
+            transparent 26%,
+            transparent 50%,
+            var(--alpha-40) 51%,
+            var(--alpha-40) 75%,
+            transparent 76%,
+            transparent 100%);
+    background-size: 7px 7px;
+}
+
 /* reset -------------------- */
 
 body {
@@ -76,7 +111,7 @@ img {
     padding: 5rem;
     /* line-height: 70px; */
     text-align: center;
-    background-image: linear-gradient(-45deg,
+    /* background-image: linear-gradient(-45deg,
             var(--alpha-40) 0%,
             var(--alpha-40) 25%,
             transparent 26%,
@@ -85,7 +120,7 @@ img {
             var(--alpha-40) 75%,
             transparent 76%,
             transparent 100%);
-    background-size: 7px 7px;
+    background-size: 7px 7px; */
 }
 
 .banner-body {
@@ -103,6 +138,7 @@ img {
     aspect-ratio: 16/9;
     object-fit: cover;
     object-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 .banner-subtitle {
@@ -193,4 +229,126 @@ img {
     100% {
         color: #fff;
     }
+}
+
+/* section --------------------- */
+
+.section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.section-description {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.section-btn {
+    display: inline-block;
+    padding: .5em 1em .6em;
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+
+.section-btn:hover {
+    opacity: .8;
+}
+
+.section-btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.section-btn-light {
+    color: var(--primary-color);
+    background-color: #fff;
+}
+
+.section-btnWrap {
+    text-align: center;
+}
+
+/* section-info ---------------------- */
+
+.section-info .section-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-info .section-head {
+    width: 60%;
+}
+
+.section-info .section-body {
+    width: 40%;
+}
+
+.section-info .section-foot {
+    width: 100%;
+}
+
+.section-info .section-title {
+    color: var(--primary-color);
+}
+
+.section-info .section-student {
+    transform: scale(1.1);
+    transform-origin: left top;
+    clip-path: polygon(20% 0%, 100% 0, 80% 70%, 0 70%);
+    z-index: 2;
+    position: relative;
+}
+
+.section-info .section-discuss {
+    transform: scale(2);
+    transform-origin: right top;
+    clip-path: polygon(50% 0%, 100% 0, 65% 90%, 15% 90%);
+}
+
+
+/* section-subject ---------------------- */
+
+.section-subject {
+    background-color: var(--primary-color);
+    /* background-image: linear-gradient(-45deg,
+            var(--alpha-40) 0%,
+            var(--alpha-40) 25%,
+            transparent 26%,
+            transparent 50%,
+            var(--alpha-40) 51%,
+            var(--alpha-40) 75%,
+            transparent 76%,
+            transparent 100%);
+    background-size: 7px 7px; */
+}
+
+.section-subject .section-head {
+    text-align: center;
+}
+
+.section-subject .section-title {
+    color: var(--primary-color);
+    background-color: #fff;
+    display: inline-block;
+    padding: 0.5em 1em;
+}
+
+.section-subject .section-subtitle {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.section-subject .section-body {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
