@@ -278,6 +278,17 @@ img {
     text-align: center;
 }
 
+.section-item {
+    margin-top: 4em;
+}
+
+.section-grid {
+    display: grid;
+    /* grid-template-columns: 33.3333% 33.3333% 33.3333%; */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
 /* section-info ---------------------- */
 
 .section-info .section-container {
@@ -343,12 +354,62 @@ img {
     padding: 0.5em 1em;
 }
 
-.section-subject .section-subtitle {
+/* .section-subject .section-subtitle {
     text-align: center;
     font-size: 2rem;
-}
+} */
 
 .section-subject .section-body {
     margin-top: 4rem;
     margin-bottom: 4rem;
+}
+
+/* card ----------------- */
+
+.section-subject .section-subtitle {
+    text-align: center;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, .7);
+}
+
+.section-underline::after {
+    content: "";
+    display: block;
+    border-bottom: solid 3px rgba(0, 0, 0, .7);
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5em;
+}
+
+.section-subject .card {
+    background-color: #fff;
+    margin-top: 3rem;
+}
+
+.card-tag {
+    color: #fff;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 0.5rem 1rem 0.6rem;
+    position: absolute;
+}
+
+.card-img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.card-title,
+.card-description {
+    margin: 1rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card-description {
+    color: rgba(0, 0, 0, .7);
+    line-height: 1.4;
 }
